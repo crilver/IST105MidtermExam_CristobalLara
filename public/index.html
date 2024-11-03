@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MidTerm Exam with Login by Firebase">
+    <title>MidTermExam Login Page</title>
+    <link rel="stylesheet" href="css/core.min.css" />
+    <link rel="stylesheet" href="css/vendor_bundle.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://canvascctb.s3.ca-central-1.amazonaws.com/account_1/attachments/95/CCTB_favicon.ico" />
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="https://matriz-teletrabajo-utc.web.app/lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="text-center mb-2">
+                <h1 class="display-5 fw-bold">Welcome!</h1>
+                <p class="lead m-0">Sign in to your CCTB account</p>
+            </div>
+            <!-- Form -->
+            <div class="col-md-9 col-lg-6 mx-auto">
+                <form action="#" method="post" class="p-4 p-md-5 card rounded-x1">
+                    <input required placeholder="Email" type="email" id="email" name="email" class="form-control" />
+                    <input placeholder="Password" type="password" id="password" class="form-control mt-2" autocomplete="off"/>
+                    <div class="col-12 col-md-12 mt-4">
+                        <button id="sign-in-2" type="button" class="btn btn-primary w-100">Sign In</button>
+                </form>
+                <sub class="text-danger">email: student@college.ca / password: Student2024</sub>
+            </div>
+            <!-- End Form -->
+
+            <!-- Alternative -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <a id="sign-in-google" class="btn bg-googleplay mt-4 text-white w-100" href="#">Google</a>
+                </div>
+                <div class="col-lg-12">
+                    <a id="sign-in-phone" class="btn bg-googleplay mt-4 text-white w-100" href="#">Phone</a>
+                </div>
+            </div>
+
+            <!-- Phone Modal with ReCaptcha -->
+            <div id="modal3" class="custModal">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <label for="phoneNum">Please add your phone number:</label>
+                    <div>
+                        <input id="phoneNum" type="text">
+                        <button id="sendPhone" type="button" class="btn btn-primary w-5">Send</button>
+                    </div>
+                    <sub class="text-danger subTip">Test Phone: +1 1234567891</sub>
+                    <div id="recaptcha" class="mb-4"></div>
+                    <div class="hidden">
+                        <input id="validation" type="text" placeholder="Validation Code">
+                        <button id="sendValCode" type="button" class="btn btn-primary w-5">Send</button>
+                    </div>
+                    <sub class="text-danger subTip hidden">Validation Code: 123456</sub>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
